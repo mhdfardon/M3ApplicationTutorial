@@ -32,37 +32,45 @@ package m3.application.skeleton;
 
 /**
  * To change the values of some variables in sparql queries
+ * 
  * @author gyrard
- *
+ * 
  */
 public class VariableSparql {
 
-private String variableName;
-private String value;
-private boolean isLiterral;
-public String getVariableName() {
-	return variableName;
-}
-public VariableSparql(String variableName, String value, boolean isLiterral) {
-	super();
-	this.variableName = variableName;
-	this.value = value;
-	this.isLiterral = isLiterral;
-}
-public void setVariableName(String variableName) {
-	this.variableName = variableName;
-}
-public String getValue() {
-	return value;
-}
-public void setValue(String value) {
-	this.value = value;
-}
-public boolean isLiterral() {
-	return isLiterral;
-}
-public void setLiterral(boolean isLiterral) {
-	this.isLiterral = isLiterral;
-}
+	private String variableName;
+	private String value;
+	private boolean isLiterral;
+
+	public String getVariableName() {
+		return variableName;
+	}
+
+	public VariableSparql(String variableName, String value, boolean isLiterral) {
+		super();
+		this.variableName = variableName;
+		this.value = value;
+		this.isLiterral = isLiterral;
+	}
+
+	public void setVariableName(String variableName) {
+		this.variableName = variableName;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	public boolean isLiterral() {
+		return isLiterral;
+	}
+
+	public void setLiterral(boolean isLiterral) {
+		this.isLiterral = isLiterral;
+	}
 
 }

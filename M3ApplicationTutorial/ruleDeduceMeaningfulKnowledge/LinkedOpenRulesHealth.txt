@@ -58,7 +58,6 @@
 # check with M3 converter
 
 # Number of rules = 25 rules (16 real health rules with references + 9 rules for scenarios to improve with real rules)
-
 ################################################################ BODY TEMPERATURE RULES ######################################################################
 #Paper: An ontology based system for social networking for health application support [Obaid et al. 2013]
 #IF m3:BodyTemperature GREATER_THAN 39 m3:DegreeCelsius THEN CriticallyHighFever
@@ -132,16 +131,7 @@
 # correctness ok 2 rules [Tanantong 2011] + 3 rules
 # completude no > 300 nothing
 
-# Paper: Towards continuous ECG monitoring based on rules and ontologies [Tanantong 2011]
-# FastHeartBeat, IF m3:HeartBeat greaterThan 102 m3:BeatPerMinute AND lessThan 150 m3:BeatPerMinute THEN FastHeartBeat
-[FastHeartBeat: 
-              (?measurement rdf:type m3:HeartBeat)
-              (?measurement m3:hasValue ?v)
-              greaterThan(?v,102)
-              lessThan(?v,150)
-              ->
-              (?measurement rdf:type health-dataset:FastHeartBeat)
-]
+
 
 # Paper: Towards continuous ECG monitoring based on rules and ontologies [Tanantong 2011]
 # SlowHeartBeat, IF m3:HeartBeat greaterThan 40 m3:BeatPerMinute AND lessThan 58 m3:BeatPerMinute THEN SlowHeartBeat
@@ -168,10 +158,20 @@
               ->
               (?measurement rdf:type health-dataset:NormalHeartBeat)
 ]
-
+# Paper: Towards continuous ECG monitoring based on rules and ontologies [Tanantong 2011]
+# FastHeartBeat, IF m3:HeartBeat greaterThan 102 m3:BeatPerMinute AND lessThan 450 m3:BeatPerMinute THEN FastHeartBeat
+[FastHeartBeat: 
+              (?measurement rdf:type m3:HeartBeat)
+              (?measurement m3:hasValue ?v)
+              greaterThan(?v,102)
+              lessThan(?v,150)
+              ->
+              (?measurement rdf:type health-dataset:FastHeartBeat)
+]
 
 # Paper: Ontology-driven monitoring of patient's vital signs enabling personalized medical detection and alert [Hristoskova 2014]
 # Tachycardia, IF m3:HeartBeat greaterThan 150 m3:BeatPerMinute THEN Tachycardia
+# SuperTachycardia, IF m3:HeartBeat greaterThan 150 m3:BeatPerMinute THEN SuperTachycardia
 # Paper: Towards continuous ECG monitoring based on rules and ontologies [Tanantong 2011]
 # VeryFastHeartBeat, IF m3:HeartBeat greaterThan 150 m3:BeatPerMinute AND lessThan 300 m3:BeatPerMinute THEN VeryFastHeartBeat
 [VeryFastHeartBeat: 
@@ -181,6 +181,20 @@
               lessThan(?v,300)
               ->
               (?measurement rdf:type health-dataset:VeryFastHeartBeat)
+]
+
+# Paper: Ontology-driven monitoring of patient's vital signs enabling personalized medical detection and alert [Hristoskova 2014]
+# Tachycardia, IF m3:HeartBeat greaterThan 150 m3:BeatPerMinute THEN Tachycardia
+# SuperTachycardia, IF m3:HeartBeat greaterThan 150 m3:BeatPerMinute THEN SuperTachycardia
+# Paper: Towards continuous ECG monitoring based on rules and ontologies [Tanantong 2011]
+# DeadlyHeartBeat, IF m3:HeartBeat greaterThan 500 m3:BeatPerMinute AND lessThan 600 m3:BeatPerMinute THEN DeadlyHeartBeat
+[DeadlyHeartBeat: 
+              (?measurement rdf:type m3:HeartBeat)
+              (?measurement m3:hasValue ?v)
+              greaterThan(?v,500)
+              lessThan(?v,600)
+              ->
+              (?measurement rdf:type health-dataset:DeadlyHeartBeat)
 ]
 
 # Paper: Ontology-driven monitoring of patient's vital signs enabling personalized medical detection and alert [Hristoskova 2014]

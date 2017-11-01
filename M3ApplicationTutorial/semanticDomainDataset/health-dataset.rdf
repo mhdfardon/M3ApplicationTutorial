@@ -112,13 +112,7 @@ This work is supported by the Com4Innov platform of the Pole SCS and DataTweet (
 	
 	<!-- ################################################ HEART BEAT ############################################################################ -->
 	
-	<health:Symptom rdf:about="FastHeartBeat">		
-		<rdfs:label xml:lang="en">FastHeartBeat</rdfs:label>
-		<rdfs:label xml:lang="fr"></rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
-		<dc:description xml:lang="en">FastHeartBeat, IF m3:HeartBeat greaterThan 102 m3:BeatPerMinute AND lessThan 150 m3:BeatPerMinute THEN FastHeartBeat [Tanantong 2011]</dc:description>				
-		<naturopathy:affectsOn rdf:resource="&emotion-dataset;Fear"/> 
-	</health:Symptom>
+	
 	
 	<health:Symptom rdf:about="SlowHeartBeat">		
 		<rdfs:label xml:lang="en">SlowHeartBeat</rdfs:label>
@@ -134,13 +128,29 @@ This work is supported by the Com4Innov platform of the Pole SCS and DataTweet (
 		<dc:description xml:lang="en">NormalHeartBeat, IF m3:HeartBeat greaterThan 58 m3:BeatPerMinute AND lessThan 102 m3:BeatPerMinute THEN NormalHeartBeat [Tanantong 2011]</dc:description>				
 	</health:Symptom>
 	
+	<health:Symptom rdf:about="FastHeartBeat">		
+		<rdfs:label xml:lang="en">FastHeartBeat</rdfs:label>
+		<rdfs:label xml:lang="fr"></rdfs:label>
+		<rdfs:comment xml:lang="en"></rdfs:comment>
+		<dc:description xml:lang="en">FastHeartBeat, IF m3:HeartBeat greaterThan 102 m3:BeatPerMinute AND lessThan 450 m3:BeatPerMinute THEN FastHeartBeat [Tanantong 2011]</dc:description>				
+		<naturopathy:affectsOn rdf:resource="&emotion-dataset;Fear"/> 
+	</health:Symptom>
+	
 	<health:Symptom rdf:about="VeryFastHeartBeat">		
-		<rdfs:label xml:lang="en">VeryFastHeartBeat or Tachycardia</rdfs:label>
+		<rdfs:label xml:lang="en">VeryFastHeartBeat or Tachycardia or SuperTachycardia</rdfs:label>
 		<rdfs:label xml:lang="fr"></rdfs:label>
 		<rdfs:comment xml:lang="en"></rdfs:comment>
 		<dc:description xml:lang="en">VeryFastHeartBeat, IF m3:HeartBeat greaterThan 150 m3:BeatPerMinute AND lessThan 300 m3:BeatPerMinute THEN VeryFastHeartBeat [Tanantong 2011] [Hristoskova 2014]</dc:description>				
 		<naturopathy:affectsOn rdf:resource="&emotion-dataset;Fear"/> 
-</health:Symptom>
+	</health:Symptom>
+	
+	<health:Symptom rdf:about="DeadlyHeartBeat">		
+		<rdfs:label xml:lang="en">DeadlyHeartBeat</rdfs:label>
+		<rdfs:label xml:lang="fr"></rdfs:label>
+		<rdfs:comment xml:lang="en"></rdfs:comment>
+		<dc:description xml:lang="en">DeadlyHeartBeat, IF m3:HeartBeat greaterThan 500 m3:BeatPerMinute AND lessThan 600 m3:BeatPerMinute THEN DeadlyHeartBeat [Tanantong 2011] [Hristoskova 2014]</dc:description>				
+		<naturopathy:affectsOn rdf:resource="&emotion-dataset;Fear"/> 
+	</health:Symptom>
 	
 	<health:Symptom rdf:about="VerySlowHeartBeat">		
 		<rdfs:label xml:lang="en">VerySlowHeartBeat or Bradycardia</rdfs:label>

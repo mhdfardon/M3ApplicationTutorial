@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml version="1.0" encoding="windows-1256"?>
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:m3="http://sensormeasurement.appspot.com/m3#" > 
@@ -25,7 +25,7 @@
   <rdf:Description rdf:about="http://sensormeasurement.appspot.com/m3#Measurement2">
     <m3:hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beet/m</m3:hasUnit>
     <m3:hasDateTimeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">0.0</m3:hasDateTimeValue>
-    <m3:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">155.0</m3:hasValue>
+    <m3:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">550.0</m3:hasValue>
     <m3:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heartbeat</m3:hasName>
     <rdf:type rdf:resource="http://sensormeasurement.appspot.com/m3#Measurement"/>
     <rdf:type rdf:resource="http://sensormeasurement.appspot.com/m3#HeartBeat"/>

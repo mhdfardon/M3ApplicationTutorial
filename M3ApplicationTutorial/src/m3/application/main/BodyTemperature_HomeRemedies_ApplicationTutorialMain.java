@@ -124,7 +124,9 @@ public class BodyTemperature_HomeRemedies_ApplicationTutorialMain {
 			
 			// STEP: TO MODIFY THE GENERIC SPARQL QUERY BY ASKING SPECIFIC INFORMATION
 			ArrayList<VariableSparql> var = new ArrayList<VariableSparql>();
-			var.add(new VariableSparql("inferTypeUri", NAMESPACE_M3 + "BodyTemperature", false));// we look for body temperature measurement
+//			var.add(new VariableSparql("inferTypeUri", NAMESPACE_M3 + "BodyTemperature", false));// we look for body temperature measurement
+			var.add(new VariableSparql("inferTypeUri", NAMESPACE_M3 + "HeartBeat", false));// we look for body temperature measurement
+//			var.add(new VariableSparql("inferTypeUri", NAMESPACE_M3 + "Cholesterol", false));// we look for body temperature measurement
 
 			// STEP: EXECUTING QUERY ENGINE
 			ExecuteQueryEngine resultQueryEngine = new ExecuteQueryEngine(

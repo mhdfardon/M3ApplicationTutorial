@@ -1948,6 +1948,9 @@ This work is supported by the Com4Innov platform of the Pole SCS and DataTweet (
         <m3:hasRecommendation rdf:resource="Cold"/>
         <m3:hasRecommendation rdf:resource="&health-dataset;CriticallyHighFever"/>
         <m3:hasRecommendation rdf:resource="&health-dataset;HighFever"/>
+        <m3:hasRecommendation rdf:resource="&health-dataset;FastHeartBeat"/>
+        <m3:hasRecommendation rdf:resource="&health-dataset;VeryFastHeartBeat"/>
+        <m3:hasRecommendation rdf:resource="&health-dataset;DeadlyHeartBeat"/>
     </naturopathy:Herb>
     
     <naturopathy:Food rdf:about="Avocado">
@@ -1959,6 +1962,7 @@ This work is supported by the Com4Innov platform of the Pole SCS and DataTweet (
         <naturopathy:hasNutrient rdf:resource="Protein"/>
         <m3:hasRecommendation rdf:resource="Winter"/>
         <naturopathy:toAvoid rdf:resource="Headache"/>
+        <m3:hasRecommendation rdf:resource="&health-dataset;DeadlyHeartBeat"/>
    	</naturopathy:Food>
         
    <naturopathy:Food rdf:about="Shrimp">
