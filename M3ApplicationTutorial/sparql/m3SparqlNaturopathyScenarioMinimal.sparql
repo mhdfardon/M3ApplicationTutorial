@@ -1,0 +1,33 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX m3: <http://sensormeasurement.appspot.com/m3#> 
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX health-dataset: <http://sensormeasurement.appspot.com/dataset/health-dataset/>
+
+SELECT DISTINCT ?name ?value ?unit ?inferType ?deduce ?suggest ?suggest_comment WHERE{
+	?measurement m3:hasName ?name.
+	?measurement m3:hasValue ?value.
+	?measurement m3:hasDateTimeValue ?time.
+	?measurement m3:hasUnit ?unit.
+	
+	?measurement rdf:type ?inferTypeUri.
+	
+	OPTIONAL { 
+		?inferTypeUri rdfs:label ?inferType. 
+	}
+		
+	OPTIONAL {
+		?measurement rdf:type health-dataset:HighFever .
+		health-dataset:HighFever rdfs:label ?deduce.
+	
+		OPTIONAL{
+		?resUri  m3:hasRecommendation health-dataset:HighFever . 
+		?resUri rdf:type ?typeRecommendedUri.  
+	    ?resUri rdfs:label ?suggest.
+	
+		OPTIONAL{
+			?resUri dc:description ?suggest_comment. 
+			}
+		}
+	}
+}
